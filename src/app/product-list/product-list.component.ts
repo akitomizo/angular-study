@@ -19,6 +19,14 @@ export class ProductListComponent {
   doSomething() {
     window.alert("Test!");
   }
+
+  onNotify() {
+    this.showAlerWindow();
+  }
+
+  showAlerWindow() {
+    window.alert("You will be notified when the product goes on sale");
+  }
 }
 
 /*

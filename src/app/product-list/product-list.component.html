@@ -1,14 +1,17 @@
 <h2>Products</h2>
 
 <div *ngFor="let pro of products">
-  <h3>{{pro.name}}</h3>
-  <a [title]="pro.name + 'の詳細を見る'">ああああ</a>
-
-  <p *ngIf="pro.description">
-    詳細：{{pro.description}}
-  </p>
-  <button (click)="doSomething()">ああ</button>
-  <app-alert [product]="5"></app-alert>
+	<h3>
+		<a [title]="pro.name + 'の詳細を見る'">
+			{{pro.name}}
+		</a>
+	</h3>
+	<p *ngIf="pro.description">
+		詳細：{{pro.description}}
+	</p>
+	<button (click)="doSomething()">ボタン</button>
+	<app-alert [pro]="pro" (notify)="onNotify()">
+	</app-alert>
 </div>
 
 <!-- 
