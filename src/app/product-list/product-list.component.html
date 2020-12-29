@@ -1,0 +1,18 @@
+<h2>Products</h2>
+
+<div *ngFor="let pro of products">
+  <h3>{{pro.name}}</h3>
+  <a [title]="pro.name + 'の詳細を見る'">ああああ</a>
+
+  <p *ngIf="pro.description">
+    詳細：{{pro.description}}
+  </p>
+  <button (click)="doSomething()">ああ</button>
+  <app-alert [product]="5"></app-alert>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
